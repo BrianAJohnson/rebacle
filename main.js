@@ -178,6 +178,7 @@ function checkWord(){
     currentGeuss++
     letterIndex = 0
 
+    console.log(currentGeuss +" "+wordSize);
     if(geussCorrect() || currentGeuss > wordSize){
         let buttons = document.querySelectorAll('.keyboard_row button')
         console.log(buttons);
@@ -188,9 +189,11 @@ function checkWord(){
 
     function geussCorrect(){
         for(let i=0; i<geuss.length; i++){
+            console.log(geuss[i]);
             if(geuss[i] != 1)return false
-            return true
+            
         }
+        return true
     }
 }
 
