@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+
+    <title>Word Game</title>
+</head>
+<body>
+    <div class="main">
+        <section id="WordBlock">
+            <!-- Board will be created hear -->
+        </section>
+
+        <section class="keyboard">
+            <div class="keyboard_row">
+                <button class="one" id="q">Q</button>
+                <button class="one" id="w">W</button>
+                <button class="one" id="e">E</button>
+                <button class="one" id="r">R</button>
+                <button class="one" id="t">T</button>
+                <button class="one" id="y">Y</button>
+                <button class="one" id="u">U</button>
+                <button class="one" id="i">I</button>
+                <button class="one" id="o">O</button>
+                <button class="one" id="p">P</button>
+            </div>
+            <div class="keyboard_row">
+                <div class="half"></div>
+                <button class="one" id="a">A</button>
+                <button class="one" id="s">S</button>
+                <button class="one" id="d">D</button>
+                <button class="one" id="f">F</button>
+                <button class="one" id="g">G</button>
+                <button class="one" id="h">H</button>
+                <button class="one" id="j">J</button>
+                <button class="one" id="k">K</button>
+                <button class="one" id="l">L</button>
+                <div class="half"></div>
+            </div>
+            <div class="keyboard_row">
+                <button class="one-half" id="enter">ENTER</button>
+                <button class="one" id="z">Z</button>
+                <button class="one" id="x">X</button>
+                <button class="one" id="c">C</button>
+                <button class="one" id="v">V</button>
+                <button class="one" id="b">B</button>
+                <button class="one" id="n">N</button>
+                <button class="one" id="m">M</button>
+                <button class="one-half" id="delete">DEL</button>
+            </div>
+        </section>
+        
+    </div>
+
+    <div class="menu-bg">
+        <div class="menu">
+            <h1>REBACLE</h1>
+            <button class="easy">Easy</button>
+            <button class="normal">Normal</button>
+            <button class="hard">Hard</button>
+        </div>
+    </div>
+
+    <div class="end-bg" style="visibility: hidden">
+        <div class="end">
+            <button class="retry">Try Again</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
