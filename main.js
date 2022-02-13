@@ -36,7 +36,7 @@ function startHard(){
 }
 
 function retry(){
-    document.querySelector(".retry").style.visibility = "hidden"
+    document.querySelector(".retry-bg").style.visibility = "hidden"
     menu.style.visibility = "visible"
 }
 
@@ -186,9 +186,13 @@ function checkWord(){
     if(geussCorrect() || currentGeuss > wordSize){
         let buttons = document.querySelectorAll('.keyboard_row button')
         console.log(buttons);
-        for(let btn of buttons){btn.disabled = false}
+        for(let btn of buttons){btn.classList.remove("correct", "misplaced","not-used")}
         currentGeuss = 100
-        document.querySelector(".retry").style.visibility = "visible"
+
+        document.querySelector(".gameWord").innerText = word.toUpperCase()
+ 
+        let gameOver = document.querySelector(".retry-bg")
+        gameOver.style.visibility = "visible"
     }
 
     function geussCorrect(){
