@@ -43,7 +43,8 @@ function retry(){
 function start(){
 
     rw = Math.floor(Math.random()*wordArray.length)
-    
+    currentGeuss = 0
+    letterIndex = 0
     word = wordArray[rw].toUpperCase()
     wordSize = word.length
 
@@ -181,6 +182,7 @@ function checkWord(){
         let buttons = document.querySelectorAll('.keyboard_row button')
         console.log(buttons);
         for(let btn of buttons){btn.disabled = false}
+        currentGeuss = 100
         document.querySelector(".retry").style.visibility = "visible"
     }
 
