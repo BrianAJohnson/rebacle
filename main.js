@@ -123,6 +123,8 @@ function updateCurrentCard(letter){
     boardArray[currentGeuss][letterIndex].querySelector(".card_front").innerText = letter
     boardArray[currentGeuss][letterIndex].querySelector(".card_back").innerText = letter
 
+    console.log(boardArray);
+
 }
 
 function checkWord(){
@@ -135,21 +137,23 @@ function checkWord(){
 
     for(let i=0; i < geuss.length; i++){
         if(geuss[i]==tempWord[i]){
-            geuss[i] = 1
-            tempWord[i] = 1
+
             boardArray[currentGeuss][i].querySelector(".card_back").classList.add("correct")
             boardArray[currentGeuss][i].style.transform = "rotateY(180deg)"
+            document.getElementById(geuss[i].toLowerCase()).classList.add("correct")
+            geuss[i] = 1
+            tempWord[i] = 1
         }
         
     }
 
     for(let i=0; i < geuss.length; i++){
+        boardArray[currentGeuss][i].style.transform = "rotateY(180deg)"
         if(geuss[i] != 1){
             for(let j=0; j < tempWord.length; j++){
                 if(tempWord[j] != 1 && geuss[i] == tempWord[j]){
                     boardArray[currentGeuss][i].querySelector(".card_back").classList.add("misplaced")
-                    boardArray[currentGeuss][i].style.transform = "rotateY(180deg)"
-
+                    document.getElementById(geuss[i].toLowerCase()).classList.add("misplaced")
                     geuss[i] = 1
                     tempWord[j] = 1
                     break
@@ -162,7 +166,7 @@ function checkWord(){
 
     for(let i=0; i<geuss.length; i++){
         if(geuss[i] != 1 && notInPuzzle(geuss[i])){
-            document.getElementById(geuss[i].toLowerCase()).disabled = true
+            document.getElementById(geuss[i].toLowerCase()).classList.add("not-used")
         }
     }
 

@@ -24,10 +24,25 @@ body {
 }
 
 .main {
-    width: 100vw;
+    width: 20%;
     height: 100%;
     text-align: center;
 }
+
+@media screen and (max-width: 600px) {
+    .main {
+        width: 100vw;
+        height: 100%;
+        text-align: center;
+    }
+
+    .keyboard{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+    }
+  }
 
 #WordBlock{
     display: flex;
@@ -35,13 +50,15 @@ body {
     justify-content: center;
     height: 75%;
     font-size: 2.5em;
+    padding: 0 .2em ;
+    gap: 0.1em;
 }
 
 .keyboard{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
 }
 
 .keyboard_row{
@@ -50,7 +67,7 @@ body {
     width: 100%;
 }
 
-.one:disabled{
+.notUsed {
     background: rgba(211, 211, 211, 0.3);
     color:rgba(39, 58, 97, 0.3);
     border: 1px solid rgba(128, 128, 128, 0.0);
@@ -73,6 +90,13 @@ body {
 
 }
 
+.not-used {
+    background: rgba(211, 211, 211, 0.3);
+    color:rgba(39, 58, 97, 0.3);
+    border: 1px solid rgba(128, 128, 128, 0.0);
+    box-shadow: none;
+}
+
 .keyboard .half{
     text-align: center;
     flex: 0.5;
@@ -92,6 +116,7 @@ body {
     display: flex;
     width: 100%;
     
+    gap: 0.1em;
 }
 
 .card:before{
